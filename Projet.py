@@ -28,16 +28,16 @@ from sklearn.metrics import accuracy_score
 pd.set_option("display.max_columns", None)
 
 #Chargement des csv d'entrainement et de test
-mnist = pd.read_csv("/Users/sokaynachaoui/Documents/projet d'été/train.csv",delimiter=",")
-test_data = pd.read_csv("/Users/sokaynachaoui/Documents/projet d'été/test.csv",delimiter=",").values
-data = pd.read_csv("/Users/sokaynachaoui/Documents/projet d'été/train.csv")
+mnist = pd.read_csv("train.csv",delimiter=",")
+test_data = pd.read_csv("test.csv",delimiter=",").values
+data = pd.read_csv("train.csv")
 
 #Affichage du nombre de ligne et colonnes
 print(mnist.shape)
 print(test_data.shape)
 
 # Affichage des images du jeu d'entrainement
-with open("/Users/sokaynachaoui/Documents/projet d'été/train.csv", 'r') as f:
+with open("train.csv", 'r') as f:
     reader = csv.reader(f, delimiter = ",")
     next(reader) # Passe la première ligne
     ligne = f.readlines() # Extrait les lignes du csv
